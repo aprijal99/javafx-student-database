@@ -3,6 +3,7 @@ package student.database.configuration;
 import javafx.application.Application;
 import javafx.application.HostServices;
 import javafx.application.Platform;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContextInitializer;
@@ -29,6 +30,10 @@ public class JavaFxEntryPoint extends Application {
 
     @Override
     public void start(Stage stage) {
+        Image logo = new Image("student-database-logo-150.png");
+        stage.setTitle("Student Database");
+        stage.getIcons().add(logo);
+
         this.context.publishEvent(new StageReadyEvent(stage));
     }
 

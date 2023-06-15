@@ -1,39 +1,25 @@
 package student.database.configuration;
 
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
+import student.database.container.Login;
 
 @Component
 public class StageListener implements ApplicationListener<StageReadyEvent> {
+    private final Login login;
+
+    public StageListener(Login login) {
+        this.login = login;
+    }
+
     @Override
     public void onApplicationEvent(StageReadyEvent event) {
-        Button okButton = new Button("OK");
-        Button cancelButton = new Button("Cancel");
+        Scene scene = new Scene(login);
 
-        HBox hBox = new HBox(10);
-        hBox.setPrefSize(200, 100);
-        hBox.getChildren().addAll(okButton, cancelButton);
-        hBox.setAlignment(Pos.CENTER);
-        hBox.setStyle("-fx-padding: 10;" +
-                "-fx-border-style: solid inside;" +
-                "-fx-border-width: 2;" +
-                "-fx-border-insets: 5;" +
-                "-fx-border-radius: 5;" +
-                "-fx-border-color: blue;");
-
-        Image logo = new Image("student-database-logo-150.png");
-
-        Scene scene = new Scene(hBox);
         Stage stage = event.getStage();
         stage.setScene(scene);
-        stage.setTitle("Student Database");
-        stage.getIcons().add(logo);
         stage.show();
     }
 }
