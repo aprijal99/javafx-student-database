@@ -32,7 +32,7 @@ public class JavaFxEntryPoint extends Application {
 
     @Override
     public void start(Stage stage) {
-        Image logo = new Image("student-database-logo-150.png");
+        Image logo = new Image("images/student-database-logo-150.png");
         stage.setTitle("Student Database");
         stage.getIcons().add(logo);
 
