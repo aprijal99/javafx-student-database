@@ -15,7 +15,7 @@ public class LoginImage extends VBox {
         Image loginImage = new Image("images/login-image.png", 300, 300, true, true);
         ImageView loginImageView = new ImageView(loginImage);
 
-        Text loginImageTitle = new Text("Student Database Application");
+        Text loginImageTitle = new Text("Manage Student Data");
         loginImageTitle.setFill(Color.WHITE);
         loginImageTitle.setFont(Font.font("Arial", FontWeight.BLACK, 20));
 
@@ -29,9 +29,9 @@ public class LoginImage extends VBox {
         loginImageSubTitleTextFlow.setTextAlignment(TextAlignment.CENTER);
 
         VBox titleContainer = new VBox(loginImageTitle, loginImageSubTitleTextFlow);
+        VBox.setMargin(titleContainer, new Insets(25, 0, 0, 0));
         titleContainer.setAlignment(Pos.CENTER);
         titleContainer.setSpacing(15);
-        VBox.setMargin(titleContainer, new Insets(25, 0, 0, 0));
 
         this.getChildren().addAll(loginImageView, titleContainer);
 
@@ -40,5 +40,6 @@ public class LoginImage extends VBox {
 
     private void setLoginImageStyles() {
         this.setAlignment(Pos.CENTER);
+        this.setPadding(new Insets(0, 100, 0, 0));
     }
 }

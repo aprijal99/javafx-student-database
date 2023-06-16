@@ -21,7 +21,7 @@ public class StageListener implements ApplicationListener<StageReadyEvent> {
         Stage stage = event.getStage();
         stage.setScene(scene);
         stage.setMinHeight(700);
-        stage.setMinWidth(900);
+        stage.setMinWidth(1200);
         stage.show();
     }
 }
