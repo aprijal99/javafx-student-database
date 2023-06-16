@@ -5,6 +5,7 @@ import javafx.application.HostServices;
 import javafx.application.Platform;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.springframework.boot.Banner;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -24,6 +25,7 @@ public class JavaFxEntryPoint extends Application {
 
         this.context = new SpringApplicationBuilder()
                 .sources(MainApplication.class)
+                .bannerMode(Banner.Mode.OFF)
                 .initializers(initializer)
                 .run(getParameters().getRaw().toArray(new String[0]));
     }
