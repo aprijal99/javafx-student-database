@@ -41,6 +41,5 @@ public class LoginImage extends VBox {
     private void setLoginImageStyles() {
         this.setAlignment(Pos.CENTER);
         this.setPadding(new Insets(25, 50, 25, 50));
-//        this.setStyle("-fx-background-color: yellow;");
     }
 }

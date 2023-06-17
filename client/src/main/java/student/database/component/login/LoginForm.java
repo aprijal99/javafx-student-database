@@ -82,6 +82,5 @@ public class LoginForm extends VBox {
     private void setLoginFormStyle() {
         this.setAlignment(Pos.CENTER);
         this.setPadding(new Insets(25, 50, 25, 50));
-//        this.setStyle("-fx-background-color: yellow;");
     }
 }
