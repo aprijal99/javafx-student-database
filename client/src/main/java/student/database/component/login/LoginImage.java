@@ -40,6 +40,5 @@ public class LoginImage extends VBox {
 
     private void setLoginImageStyles() {
         this.setAlignment(Pos.CENTER);
-        this.setPadding(new Insets(0, 100, 0, 0));
     }
 }

@@ -27,5 +27,6 @@ public class LoginContainer extends HBox {
     private void setLoginContainerStyles() {
         this.setStyle("-fx-background-color: #121212");
         this.setPrefSize(1200, 700);
+        this.setSpacing(200);
     }
 }

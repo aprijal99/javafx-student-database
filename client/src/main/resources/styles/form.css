@@ -1,0 +1,37 @@
+.input {
+    -fx-background-color: #121212;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-family: Arial;
+    -fx-font-size: 14;
+}
+
+.input-border {
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+    -fx-padding: 15 10 15 10;
+}
+
+.input-border:focused {
+    -fx-border-color: rgb(0, 107, 203);
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-background-color: rgb(0, 107, 203);
+    -fx-background-radius: 5;
+    -fx-background-insets: 1 0 1 0;
+    -fx-padding: 12;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: rgb(0, 120, 227);
+}
+
+.button:pressed {
+    -fx-background-color: rgb(0, 92, 175);
+}
