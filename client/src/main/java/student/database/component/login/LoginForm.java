@@ -52,6 +52,7 @@ public class LoginForm extends VBox {
         formContainer.setSpacing(15);
         formContainer.setFillWidth(true);
         formContainer.setPrefWidth(300);
+        formContainer.setMinWidth(300);
         formContainer.getStylesheets().add(new ClassPathResource("styles/form.css").getURL().toString());
 
         Hyperlink askForgotPassword = new Hyperlink("Forgot password?");
@@ -80,5 +81,7 @@ public class LoginForm extends VBox {
 
     private void setLoginFormStyle() {
         this.setAlignment(Pos.CENTER);
+        this.setPadding(new Insets(25, 50, 25, 50));
+//        this.setStyle("-fx-background-color: yellow;");
     }
 }

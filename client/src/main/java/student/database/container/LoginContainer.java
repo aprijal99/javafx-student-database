@@ -7,7 +7,7 @@ import student.database.component.login.LoginForm;
 import student.database.component.login.LoginImage;
 
 @Component
-public class LoginContainer extends HBox {
+public class LoginContainer extends TilePane {
     private final LoginImage loginImage;
     private final LoginForm loginForm;
 
@@ -27,6 +27,6 @@ public class LoginContainer extends HBox {
     private void setLoginContainerStyles() {
         this.setStyle("-fx-background-color: #121212");
         this.setPrefSize(1200, 700);
-        this.setSpacing(200);
+        this.setHgap(50);
     }
 }
