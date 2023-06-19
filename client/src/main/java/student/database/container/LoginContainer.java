@@ -1,7 +1,6 @@
 package student.database.container;
 
 import javafx.geometry.Pos;
-import javafx.scene.control.Control;
 import javafx.scene.layout.*;
 import org.springframework.stereotype.Component;
 import student.database.component.login.LoginForm;
@@ -16,20 +15,19 @@ public class LoginContainer extends TilePane {
         this.loginImage = loginImage;
         this.loginForm = loginForm;
 
-        this.layoutChildrenNodes();
-        this.setLoginContainerStyles();
+        this.layoutNodes();
+        this.setStyling();
     }
 
-    private void layoutChildrenNodes() {
+    private void layoutNodes() {
+        this.getChildren().addAll(loginForm, loginImage);
+    }
+
+    private void setStyling() {
         this.setHgap(50);
         this.setAlignment(Pos.CENTER);
         this.setMaxWidth(Region.USE_PREF_SIZE);
         this.setMaxHeight(Region.USE_PREF_SIZE);
         this.setPrefColumns(2);
-        this.getChildren().addAll(loginForm, loginImage);
-    }
-
-    private void setLoginContainerStyles() {
-//        this.setStyle("-fx-background-color: red");
     }
 }

@@ -12,6 +12,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoginImage extends VBox {
     public LoginImage() {
+        this.layoutNodes();
+        this.setStyling();
+    }
+
+    private void layoutNodes() {
         Image loginImage = new Image("images/login-image.png", 300, 300, true, true);
         ImageView loginImageView = new ImageView(loginImage);
 
@@ -34,11 +39,9 @@ public class LoginImage extends VBox {
         titleContainer.setSpacing(15);
 
         this.getChildren().addAll(loginImageView, titleContainer);
-
-        this.setLoginImageStyles();
     }
 
-    private void setLoginImageStyles() {
+    private void setStyling() {
         this.setAlignment(Pos.CENTER);
         this.setPadding(new Insets(25, 50, 25, 50));
     }
